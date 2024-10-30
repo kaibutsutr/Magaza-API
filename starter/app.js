@@ -19,10 +19,10 @@ app.get("/", (req, res) => {
 });
 
 const start = async () => {
-  // server start method
   try {
+    // connectDB
     await connectDB(process.env.MONGO_URI);
-    app.listen(port, console.log("Server is listening"));
+    app.listen(port, () => console.log(`Server is listening port ${port}...`));
   } catch (error) {
     console.log(error);
   }
