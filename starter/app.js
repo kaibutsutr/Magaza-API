@@ -9,6 +9,7 @@ const port = 3000;
 
 const notFound = require("./middleware/not-found");
 const errorMiddleware = require("./middleware/error-handler");
+//error middleware not used
 const connectDB = require("./db/connect");
 const productsRouter = require("./routes/products");
 
